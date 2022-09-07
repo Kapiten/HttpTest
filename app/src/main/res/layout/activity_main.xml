@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cbm.android.httptest.MainActivity"
+    android:padding="4dp"
+    android:background="#808080">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="Hello, Http World!"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bgr_black"
+            android:padding="4dp"
+            >
+            <CheckBox
+                android:id="@+id/chkDomain"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Domain Website"
+                android:textColor="@android:color/white"
+                android:button="@drawable/checkness_grey"
+                />
+            <EditText
+                android:id="@+id/etHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:background="@drawable/bgrh_white"
+                android:textColor="@drawable/txt_wb"
+                android:hint="Host eg http://0.0.0.1"
+                />
+            <EditText
+                android:id="@+id/etPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:background="@drawable/bgrh_white"
+                android:textColor="@drawable/txt_wb"
+                android:hint="Port eg. 8080"
+                />
+            <EditText
+                android:id="@+id/etSite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:background="@drawable/bgrh_white"
+                android:textColor="@drawable/txt_wb"
+                android:hint="site"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/bgr_accent"
+                    android:textColor="@android:color/black"
+                    android:text="Submit"
+                    />
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bgr_white"
+                    android:textColor="@android:color/black"
+                    android:text="Clear"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:background="@drawable/bgr_white"
+            android:text="Result"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

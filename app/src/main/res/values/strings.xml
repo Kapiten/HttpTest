@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HttpTest</string>
+    <string name="title_activity_crud">CRUD Editor</string>
+    <string name="title_activity_log">LogActivity</string>
+</resources>
