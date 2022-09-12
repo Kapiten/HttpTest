@@ -183,6 +183,19 @@ public class LogActivity extends Activity {
         return new ArrayList<>();
     }
 
+    private TextView createSimpleTV(String s) {
+        final TextView tv = new TextView(this);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.bottomMargin=4;
+        tv.setLayoutParams(lp);
+        tv.setPadding(8, 8, 8, 8);
+        tv.setTag("logEntry");
+        tv.setText(s);
+        tv.setTextColor(Color.BLACK);
+        tv.setBackgroundColor(Color.WHITE);
+        return tv;
+    }
+
     private TextView createTV(String s) {
         final TextView tv = new TextView(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -226,17 +239,9 @@ public class LogActivity extends Activity {
 
         llFV.setOrientation(LinearLayout.VERTICAL);
         sv.addView(llFV);
-        String innerText = "";
 
         for(int x=0; x<ltext.size(); x++) {
-            innerText+=ltext.get(x);
-            View v = createTV(innerText);
-            v.setOnClickListener(null);
-            v.setOnLongClickListener(null);
-            v.setClickable(false);
-
-            unregisterForContextMenu(v);
-            llFV.addView(v);
+            llFV.addView(createSimpleTV(ltext.get(x)));
         }
 
         return sv;
